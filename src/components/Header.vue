@@ -17,6 +17,7 @@ export default defineComponent({
     Menu,
     RewindIcon
   },
+  emits:['aoExibirMenu'],
   data(){
     return {
       aberto:false
@@ -26,7 +27,7 @@ export default defineComponent({
     aoClicarNoBotao():void{
         console.log('clicou', this.aberto)
         this.aberto = !this.aberto;
-        //this.$emit('aoClicarBotao', this.aberto)
+        this.$emit('aoExibirMenu', this.aberto)
     }
   }
 });

@@ -10,11 +10,19 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "MainContainer",
-  props:['columns'],
+  props:{
+    menuAberto: {
+        type: Boolean,
+        required:true
+    }
+  },
   computed:{
       classe():string{
-        return 'min-h-min'
-
+        if(this.menuAberto){
+            return 'ml-40 h-screen'
+        }else{
+            return 'h-screen'
+        }
     }
   }
 });
