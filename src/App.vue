@@ -3,7 +3,7 @@
 <template>
   
   <HeaderApp @aoExibirMenu="resizeMain" />
-  <div class="absolute top-12 left-0 w-full z-0 left-0 bg-gray-100  w-full">
+  <div class="absolute top-12 left-0 w-full z-0 left-0 bg-secondary  w-full">
     <MainContainer :menuAberto="menuAberto" >
       <RouterView />
     </MainContainer>
@@ -43,11 +43,19 @@ export default defineComponent({
   }
 });
 </script>
-<style scoped>
-.menu{
-
+<style >
+:root{
+  --bg-primary: black;
+  --bg-secondary: gray;
+  --bg-contrast: gray / 2;
 }
-.main{
-  min-height: 100vh;
+.bg-primary{
+  background-color: var(--bg-primary);
+}
+.bg-secondary{
+  background-color: var(--bg-contrast);
+}
+.bg-contrast{
+  background-color: var(--bg-contrast);
 }
 </style>

@@ -28,7 +28,7 @@ export default defineComponent({
     classes():string {
         console.log('classes', this.aberto)
         if(this.aberto){
-            return 'z-10 absolute top-12 h-screen left-0  bg-blue-500 w-40'
+            return 'z-10 absolute top-12 h-screen left-0 w-40 border-solid border-r-2 border-gray-200 bg-secondary'
         }else{
             return 'hidden'
         }
@@ -45,7 +45,5 @@ export default defineComponent({
     </div>
 </template>
 <style scoped>
-ul{
-    border-right: solid 1px blue;
-}
+
 </style>
