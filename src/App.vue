@@ -2,24 +2,28 @@
 
 <template>
   
-  <Header @aoExibirMenu="resizeMain" />
+  <HeaderApp @aoExibirMenu="resizeMain" />
   <div class="absolute top-12 left-0 w-full z-0 left-0 bg-gray-100  w-full">
     <MainContainer :menuAberto="menuAberto" >
       <RouterView />
     </MainContainer>
-    <Footer />
+    <FooterApp />
   </div>
 
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import MainContainer from "@/components/MainContainer.vue";
+import FooterApp from "@/components/FooterApp.vue";
+import HeaderApp from "@/components/HeaderApp.vue";
 import { RouterView } from "vue-router";
 export default defineComponent({
   name: "LayoutApp",
   components:{
+    HeaderApp,
     MainContainer, 
     RouterView,
+    FooterApp
   },
   data(){
     return {
