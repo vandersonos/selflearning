@@ -45,17 +45,21 @@ export default defineComponent({
 </script>
 <style >
 :root{
-  --bg-primary: black;
-  --bg-secondary: gray;
-  --bg-contrast: gray / 2;
+  --bg-primary: #1a877b!important;
+  --bg-secondary: #eaf9f8;
+  --bg-contrast: rgb(44, 148, 70);
 }
 .bg-primary{
   background-color: var(--bg-primary);
 }
 .bg-secondary{
-  background-color: var(--bg-contrast);
+  background-color: var(--bg-secondary);
 }
-.bg-contrast{
+.bg-contrast:hover{
   background-color: var(--bg-contrast);
+  color: white;
+}
+.text-color{
+  color:var(--bg-primary);
 }
 </style>

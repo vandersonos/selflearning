@@ -1,5 +1,5 @@
 <template>
-  <li class="py-2 px-2 border-solid border-b-2 border-gray-200 mx-2 hover:bg-gray-200">
+  <li class="py-2 px-4 border-solid border-b-2 border-gray-200  bg-contrast">
     <RouterLink :to="url">{{text}}</RouterLink>
   </li>
 </template>

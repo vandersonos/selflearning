@@ -1,7 +1,7 @@
 <template>
-  <header class="h-12 bg-black fixed top-0 z-10 w-full">
+  <header class="h-12 bg-primary fixed top-0 z-10 w-full">
     <button class="w-50 h-50 px-2 py-2 bg-white rounded mx-4 my-1 hover:bg-gray-200" @click="aoClicarNoBotao"> 
-        <MenuIcon class="h-5 w-5 text-black"/>
+        <MenuIcon class="h-5 w-5 text-color"/>
     </button>
     <Menu :aberto="aberto" />
   </header>
