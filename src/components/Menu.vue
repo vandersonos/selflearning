@@ -28,8 +28,8 @@ export default defineComponent({
     classes():string {
         console.log('classes', this.aberto)
         if(this.aberto){
-            return 'z-10 absolute top-12 h-screen left-0 w-40 border-solid border-r-2 border-gray-200 bg-secondary'
-        }else{
+            return 'z-10 absolute top-12 h-screen left-0 w-64 border-solid border-r-2 menu bg-secondary'
+        } else {
             return 'hidden'
         }
     }
@@ -39,11 +39,13 @@ export default defineComponent({
 
 <template>
     <div :class="classes">
-        <ul class="">
+        <ul class="mt-2.5">
             <MenuItem v-for="(m, index) in menus" :modelo="m" :key="index" />
         </ul>
     </div>
 </template>
 <style scoped>
-
+.menu{
+    border-right-color: var(--bg-primary);
+}
 </style>

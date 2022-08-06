@@ -47,7 +47,7 @@ export default defineComponent({
 :root{
   --bg-primary: #1a877b!important;
   --bg-secondary: #eaf9f8;
-  --bg-contrast: rgb(44, 148, 70);
+  --bg-contrast: #45b4a7;
 }
 .bg-primary{
   background-color: var(--bg-primary);
@@ -57,7 +57,7 @@ export default defineComponent({
 }
 .bg-contrast:hover{
   background-color: var(--bg-contrast);
-  color: white;
+  color: white!important;
 }
 .text-color{
   color:var(--bg-primary);

@@ -1,5 +1,5 @@
 <template>
-  <li class="py-2 px-4 border-solid border-b-2 border-gray-200  bg-contrast">
+  <li class="py-2 px-4 border-solid  bg-contrast menu-item">
     <RouterLink :to="url">{{text}}</RouterLink>
   </li>
 </template>
@@ -23,4 +23,9 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.menu-item{
+  color: var(--bg-primary);
+  font-weight: 300;
+}
+</style>

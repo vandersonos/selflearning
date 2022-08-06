@@ -19,7 +19,7 @@ export default defineComponent({
   computed:{
       classe():string{
         if(this.menuAberto){
-            return 'ml-40 h-screen'
+            return 'ml-64 h-screen'
         }else{
             return 'h-screen'
         }
