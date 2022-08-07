@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import Input from "@/components/Formulario/Input.vue";
-import Button from "@/components/Formulario/Button.vue";
+
 import Modal from "@/components/Modal.vue";
+import ContainerCadastro from "@/modules/core/ContainerCadastro.vue";
+
+function redir() {
+    window.location.href = '/'
+}
 </script>
 
 <template>
-
-        <Modal open="false">
-            <h3 slot="header">custom header</h3>
-            <slot name="body">
-                <Input label="CPF" value="" />
-                <div class="py-4">
-                    <Button value="Avançar" type="primary" />
-                </div>
+        <Modal open="true" title="cadastro" @closed="redir">
+            <slot>
+                <ContainerCadastro />
             </slot>
       </Modal>
 </template>

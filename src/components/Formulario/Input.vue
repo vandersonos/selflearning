@@ -1,7 +1,7 @@
 <template>
     <div>
         <label for="cpf" class="mb-2">CPF</label>
-        <input id='cpf' name='cpf' value='' class='rounded border-2 w-52' />
+        <input :id="`${name}Id`" :name='name' :type='type' :value='value' class='rounded border-2 w-52' :readonly="readonly" :placeholder="placeholder"/>
     </div>
 </template>
 <script lang="ts">
@@ -9,7 +9,32 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "FormInput",
-  props: ["label", "value"]
+  props: {
+    label: {
+        type: String,
+        required:true
+    },
+    name: {
+        type: String,
+        required:true
+    },
+    
+    type: {
+        type: String,
+        required:true,
+        default:'text'
+    },
+    value: {
+        type: String
+    },
+    placeholder: {
+        type: String
+    },
+    readonly: {
+        type: String
+    }
+    
+  }
 });
 </script>
 

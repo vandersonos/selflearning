@@ -19,7 +19,7 @@ export default defineComponent({
             {url:"/cadastro", text:"Cadastro"},
             {url:"/", text:"Home"},
             {url:"/about", text:"Sobre"},
-            {url:"/creditos", text:"Créditos"},
+            {url:"/selecao", text:"Seleção de conteúdos"},
             {url:"/sair", text:"Sair"},
         ]
     }
