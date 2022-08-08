@@ -3,7 +3,7 @@
 <template>
   
   <HeaderApp @aoExibirMenu="resizeMain" />
-  <div class="absolute top-12 left-0 w-full z-0 left-0 bg-secondary  w-full">
+  <div class="absolute top-12 left-0 w-full z-0 left-0 bg-slate-200  w-full">
     <MainContainer :menuAberto="menuAberto" >
       <RouterView />
     </MainContainer>
