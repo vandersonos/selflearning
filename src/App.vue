@@ -49,7 +49,9 @@ export default defineComponent({
   --bg-secondary: #eaf9f8;
   --bg-contrast: #45b4a7;
   --font-color-primary:white;
+  font-weight: 400;
 }
+
 .bg-primary{
   background-color: var(--bg-primary);
 }
@@ -63,6 +65,30 @@ export default defineComponent({
 .text-color{
   color:var(--bg-primary);
 }
+.btn{
+  @apply px-4;
+  @apply py-2;
+  @apply rounded;
+  @apply text-white;
+  @apply mr-2;
+  @apply bg-gray-200;
+  @apply text-black;
+  @apply text-xs;
+}
+.btn:hover{
+    @apply opacity-60;
+}
+.btn-primary{
+  @apply bg-primary;
+  @apply text-white;
+}
+.btn-secondary{
+  @apply text-white;
+  @apply bg-secondary;
+}
+
+
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;

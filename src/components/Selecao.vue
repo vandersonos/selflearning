@@ -57,39 +57,50 @@ export default defineComponent({
             },*/
             {
                 serial: "2",
-                tipo: "imagem",
-                titulo: "slide 2",
-                subtitulo: "Desmostração de imagem",
-                introducao: "este é um slide de conteúdo visual.",
+                type: "imagem",
+                title: "slide 2",
+                caption: "Desmostração de imagem",
+                introduction: "este é um slide de conteúdo visual.",
                 imagens:[
                     {
-                        titulo: 'Imagem de exemplo 1',
+                        title: 'Imagem de exemplo 1',
                         descricao:'Imagem de uma foto no conteudo',
                         fonte: 'equipe',
                         url:'https://dms.ufpel.edu.br/static/img/apr_enf_med_apresentacao_video_poster.png'
                     },
                     {
-                        titulo: 'Imagem de exemplo 1',
+                        title: 'Imagem de exemplo 1',
                         descricao:'Imagem de uma foto no conteudo',
                         fonte: 'equipe',
                         url:'https://dms.ufpel.edu.br/static/img/apr_enf_med_apresentacao_video_poster.png'
                     }
                 ],
-                conteudo: "Este slide é usado para exibir uma imagem, como por exemplo um gráfico, aqui nesta secção ficaria a explicação da mesma."
+                content: "Este slide é usado para exibir uma imagem, como por exemplo um gráfico, aqui nesta secção ficaria a explicação da mesma."
             }
             ,
             {
                 serial: "3",
-                tipo: "video",
-                titulo: "slide 3",
-                subtitulo: "Desmostração de video",
-                introducao: "este é um slide de video.",
-                conteudo: "Este slide é usado para exibir um video player, com por exemplo um video instrucional ou um link do you tube, aqui nesta secção ficaria a explicação da mesma.",
-                url: 'http://dms.ufpel.edu.br/static/img/apr_enf_med_apresentacao_video_poster.png',
-                sources: [
+                type: "video",
+                title: "slide 3",
+                caption: "Desmostração de video",
+                introduction: "este é um slide de video.",
+                content: "Este slide é usado para exibir um video player, com por exemplo um video instrucional ou um link do you tube, aqui nesta secção ficaria a explicação da mesma.",
+                videos: [
                     {
-                        url: 'http://dms.ufpel.edu.br/static/videos/apr_enf_med_apresentacao_240p.mp4',
-                        resolucao: 240
+                        title: 'video 1',
+                        files:[
+                            {
+                                url: 'http://dms.ufpel.edu.br/static/videos/apr_enf_med_apresentacao_480p.mp4',
+                                resolucao: 480,
+                                type:'video/mp4',
+                                media: 'all and (max-width: 480px)'
+                            }
+
+                        ],
+                        cover:'http://dms.ufpel.edu.br/static/img/apr_enf_med_apresentacao_video_poster.png',
+                        support_material:"teste.pdf",
+                        description:"Video-aula sobre html e css.",
+                        source: "Treina para web ltda."
                     }
                 ]
             }

@@ -9,7 +9,7 @@ export default defineComponent({
   props: ["value", "type"],
   computed:{
     classes(): string {
-      let classes = "px-4 py-2 rounded text-white mr-2"
+      let classes = "btn btn-primary"
       switch(this.type){
         case 'primary':
           return classes+' bg-primary'
@@ -24,7 +24,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-button:hover{
-    opacity: 0.8;
-}
+
+
 </style>

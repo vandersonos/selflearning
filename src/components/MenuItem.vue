@@ -26,6 +26,6 @@ export default defineComponent({
 <style scoped>
 .menu-item{
   color: var(--bg-primary);
-  font-weight: 300;
+  
 }
 </style>

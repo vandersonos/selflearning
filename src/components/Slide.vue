@@ -4,11 +4,12 @@ import { defineComponent } from "vue";
 import Alternativa from '@/components/AlternativaItem.vue'
 import ReferenciaItem from '@/components/ReferenciaItem.vue'
 import ImagemItem from '@/components/ImagemItem.vue'
+import VideoItem from '@/components/VideoItem.vue'
 
 export default defineComponent({ 
   name: "SlideItem",
   props: ["modelo"],
-  components:{Alternativa, ReferenciaItem, ImagemItem},
+  components:{Alternativa, ReferenciaItem, ImagemItem, VideoItem},
   data(){
     return {
         isQuest: (this.modelo.tipo == 'questao'),
@@ -20,19 +21,19 @@ export default defineComponent({
 </script>
 <template>
   <li class="py-2 px-4 border-solid border-2 my-4  modelo-item ">
-    <section id="titulo" v-if="modelo.titulo" class="p-2">
-        <h3>{{modelo.titulo}}</h3>
-        <h4>{{modelo.subtitulo}}</h4>
+    <section id="titulo" v-if="modelo.title" class="p-2">
+        <h3>{{modelo.title}}</h3>
+        <h4>{{modelo.caption}}</h4>
     </section>
-     <section id="introducao" v-if="modelo.introducao" class="my-4 px-7 py-4 bg-white">
-        <p>{{modelo.introducao}}</p>
+     <section id="introducao" v-if="modelo.introduction" class="my-4 px-7 py-4 bg-white">
+        <p>{{modelo.introduction}}</p>
     </section>
-    <section id="imgens" v-if="modelo.imagens" class="my-4 px-7 pt-2  bg-white">
+    <section id="imgens" v-if="modelo.imagens" class="my-4 px-7 py-2  bg-white">
         <ul >
            <ImagemItem v-for="(m, index) in modelo.imagens" :modelo="m" :key="index" />
         </ul>
     </section>
-    <section id="videos" v-if="modelo.videos" class="my-4 px-7 pt-2  bg-white">
+    <section id="videos" v-if="modelo.videos" class="my-4 px-7 py-4  bg-white">
         <ul >
            <VideoItem v-for="(m, index) in modelo.videos" :modelo="m" :key="index" />
         </ul>
