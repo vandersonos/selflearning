@@ -1,5 +1,5 @@
 <template>
-         <div class="flex p-2 tollbar">
+         <div class="flex   p-2 tollbar">
             <slot />
         </div>
 </template>

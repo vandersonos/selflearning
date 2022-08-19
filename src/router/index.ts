@@ -43,12 +43,36 @@ const router = createRouter({
       component: () => import("../views/Cadastro.vue"),
     },
     {
-      path: "/modulos",
-      name: "modulos",
+      path: "/modules",
+      name: "modules",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/Modulos.vue"),
+      component: () => import("../views/modules/index.vue"),
+    },
+    {
+      path: "/modules/new",
+      name: "newModule",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/modules/new.vue"),
+    },
+    {
+      path: "/contents",
+      name: "contents",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/contents/index.vue"),
+    },
+    {
+      path: "/contents/new",
+      name: "newContent",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/contents/new.vue"),
     },
   ],
 });

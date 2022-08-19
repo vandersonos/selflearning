@@ -3,7 +3,7 @@
         <div class=" px-4 main">
             <h2>Modulos</h2>
             <ToolBar>
-                <Button value="Novo" href="/modulos/novo" />
+                <a href="/modulos/novo"><Button value="Novo"  /></a>
             </ToolBar>
             <ul class="mt-4">
                 <li class="border-2 p-2 " v-for="(m, index) in modulos" :modelo="m" :key="index" >
@@ -17,9 +17,9 @@
 
 import { defineComponent } from "vue";
 import ToolBar from "@/components/ToolBar.vue"
-import Button from "../../components/Formulario/Button.vue"
+import Button from "@/components/Formulario/Button.vue"
 export default defineComponent({
-  name: "ModulosAdmin",
+  name: "ModulosIndex",
   props:{
   },
   computed:{

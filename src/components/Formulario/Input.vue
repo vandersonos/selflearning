@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="my-4">
         <label for="cpf">CPF</label>
         <input id='cpf' name='cpf' value='' />
     </div>
