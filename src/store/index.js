@@ -1,15 +1,12 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
+import { createStore } from 'vuex'
 import user from './user'
 
-Vue.useAttrs(Vuex)
 
 export default function(){
-  const Store = new Vuex.Store({
+  const store = createStore({
     modules:{
       user
     }
   })
-  return Store
+  return store
 }
