@@ -154,4 +154,60 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+label{
+    display: block;
+    @apply mb-2;
+   
+}
+input, select{
+   border-color: var(--bg-primary);
+}
+select{
+
+  @apply rounded;
+  @apply border-2;
+  @apply w-52;
+}
+input:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--bg-contrast);
+}
+.titulo-cards {
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    font-family: Oswald, sans-serif;
+    color: #6f1418;
+    font-size: 45px;
+    line-height: 1.3em;
+    font-weight: 500;
+    text-shadow: 0 4px 0 rgb(0 0 0 / 15%);
+}
+.texto-padrao {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: Archivo, sans-serif;
+    font-size: 2.3em;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+.txt-click {
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    font-family: Oswald, sans-serif;
+    font-size: 2vw;
+    line-height: 1.3em;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 4px 0 rgb(0 0 0 / 15%);
+}
 </style>

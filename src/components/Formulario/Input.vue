@@ -1,7 +1,8 @@
 <template>
     <div>
-        <label for="cpf" class="mb-2">CPF</label>
-        <input :id="`${name}Id`" :name='name' :type='type' :value='value' class='rounded border-2 w-52' :readonly="readonly" :placeholder="placeholder"/>
+        <label for="cpf" class="mb-2">{{label}}</label>
+        <input :id="`${name}Id`" :name='name' :type='type' :value='value' class='rounded border-2 w-52' :readonly="readonly" :placeholder="placeholder" :v-model='v-model'/>
+        <div v-if="message-error" class="mx-2 p-2">{{message-error}}</div>
     </div>
 </template>
 <script lang="ts">
@@ -32,22 +33,19 @@ export default defineComponent({
     },
     readonly: {
         type: String
+    },
+    'v-model': {
+        type: String
+    },
+    'message-error':{
+        type:String
     }
+    
     
   }
 });
 </script>
 
 <style scoped>
-label{
-    display: block;
-   
-}
-input{
-   border-color: var(--bg-primary);
-}
-input:focus{
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem var(--bg-contrast);
-}
+
 </style>

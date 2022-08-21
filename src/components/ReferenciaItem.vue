@@ -1,11 +1,11 @@
 <template>
   <li class="py-2 px-4">
-    {{autor}}. <b>{{titulo}}</b>. 
-    <span v-if="etc"> {{etc}}</span> 
-    <span v-if="local">. {{local}}</span> 
-    <span v-if="ano">, {{ano}}</span> 
+    {{modelo.author}}. <b>{{modelo.title}}</b>. 
+    <span v-if="modelo.etc"> {{modelo.etc}}</span> 
+    <span v-if="modelo.local">. {{modelo.local}}</span> 
+    <span v-if="modelo.year">, {{modelo.year}}</span> 
     <span v-if="modelo.url">. Disponível em: <a :href="modelo.url">{{modelo.url}}</a> </span>
-    <span v-if="modelo.data_acesso">. Acesso em: {{modelo.data_acesso}} </span>
+    <span v-if="modelo.access_date">. Acesso em: {{modelo.access_date}} </span>
     <span v-if="modelo.url_local">. Espelho local: <a :href="modelo.url_local" ><u>Clique aqui</u></a></span>
   </li>
 </template>
@@ -19,7 +19,7 @@ export default defineComponent({
   name: "ReferenciaItem",
   props: ["modelo"],
   data(){
-    console.log(this.modelo,'ref');
+
     return this.modelo
   }
 });
