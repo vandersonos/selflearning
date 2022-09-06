@@ -146,6 +146,13 @@ p {
 *, ::after, ::before {
     box-sizing: border-box;
 }
+body{
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+label{
+  font-style: bold;
+}
 
 p {
     display: block;
@@ -155,9 +162,7 @@ p {
     margin-inline-end: 0px;
 }
 label{
-    display: block;
-    @apply mb-2;
-   
+    display: block;  
 }
 input, select{
    border-color: var(--bg-primary);

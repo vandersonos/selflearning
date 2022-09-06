@@ -1,7 +1,8 @@
 <template>
     <div class="mt-4">
-        <label for="cpf" class="">{{label}}</label>
-        <input :id="`${name}Id`" :name='name' :type='type' :value='value' class='rounded border-2' :readonly="readonly" :placeholder="placeholder" :v-model='v-model'/>
+        <label for="cpf" class="">
+        <input :id="`${name}Id`" :name='name' type='checkbox' :value='value' class='rounded border-2' :readonly="readonly" :v-model='v-model'/>
+        {{label}}</label>
         <div v-if="message-error" class="mx-2 p-2">{{message-error}}</div>
     </div>
 </template>
@@ -9,7 +10,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "FormInput",
+  name: "FormCheckbox",
   props: {
     label: {
         type: String,
@@ -26,9 +27,6 @@ export default defineComponent({
         default:'text'
     },
     value: {
-        type: String
-    },
-    placeholder: {
         type: String
     },
     readonly: {
